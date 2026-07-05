@@ -1,102 +1,69 @@
-# Mobile Programming Projects
+# Mobile-Programming
 
-A collection of mobile application development projects created during mobile programming coursework, built with Kotlin and Android.
+## Overview
 
-## About
+Kotlin/Android mobile app development projects
 
-This repository contains various mobile applications exploring Android development patterns, UI frameworks, and native features using Kotlin.
+Repository: [JohnAndrewBalbarosa/Mobile-Programming](https://github.com/JohnAndrewBalbarosa/Mobile-Programming)
 
-## Features
+## Problem and Goal
 
-- Native Android development with Kotlin
-- Modern Android architecture patterns
-- Material Design UI components
-- Activity and Fragment lifecycle management
-- Data persistence and storage
-- Intent-based navigation
+This project should be read as a technical build: it identifies a concrete workflow or research problem, implements a working system around that problem, and documents enough evidence for another person to understand, run, and evaluate the result.
 
-## Tech Stack
+Primary goals:
 
-- **Kotlin**: Primary language
-- **Android SDK**: Native framework
-- **Jetpack Libraries**: Architecture components
-- **Material Design 3**: Modern UI design system
-- **Room**: Local database
-- **SharedPreferences**: Key-value storage
-- **Gradle**: Build system
+- Explain what the project does and who it is for.
+- Show the architecture and implementation choices.
+- Provide enough setup guidance for local review.
+- Report measured results when available.
+- Make limitations and next steps explicit instead of implying unverified impact.
 
-## Architecture (UML)
+## System Design
 
-```mermaid
-graph TD
-    Activity["Activities<br/>UI Controllers"]
-    Fragment["Fragments<br/>Modular UI Components"]
-    
-    ViewModel["ViewModels<br/>State Management"]
-    Repository["Repository<br/>Data Access Layer"]
-    
-    Database["Room Database<br/>Local Storage"]
-    SharedPref["SharedPreferences<br/>Simple Storage"]
-    
-    ApiClient["API Client<br/>Network Requests"]
-    RemoteServer["Remote Server<br/>Backend"]
-    
-    Activity -->|hosts| Fragment
-    Activity -->|uses| ViewModel
-    Fragment -->|observes| ViewModel
-    
-    ViewModel -->|queries| Repository
-    Repository -->|reads/writes| Database
-    Repository -->|reads/writes| SharedPref
-    Repository -->|fetches| ApiClient
-    ApiClient -->|communicates| RemoteServer
-```
+Current documented components:
 
-## Project Structure
+- Automated tests or validation examples.
 
-```
-main/
-├── java/
-│   └── com/example/mobile/
-│       ├── ui/          # Activities & Fragments
-│       ├── viewmodel/   # ViewModel classes
-│       ├── data/        # Repository & database
-│       └── network/     # API clients
-├── res/
-│   ├── layout/          # XML layouts
-│   ├── drawable/        # Images & vectors
-│   ├── values/          # Strings, colors, themes
-│   └── menu/            # Menu resources
-└── AndroidManifest.xml  # App manifest
-```
+Project tags:
 
-## Getting Started
+- To be tagged based on the final project stack.
 
-### Prerequisites
+## Setup and Usage
 
-- Android Studio Koala or newer
-- Android SDK 24+ (API level)
-- Kotlin 1.9+
+Use the commands below as the starting point for local setup. Verify environment variables, secrets, datasets, and external services before running production-like workflows.
 
-### Build & Run
+No runnable setup command is confirmed yet.
 
-1. Clone the repository
-2. Open in Android Studio
-3. Sync Gradle dependencies
-4. Run on emulator or device via Android Studio
+Document the dependency installation and run command after the next local verification pass.
 
-```bash
-./gradlew build
-./gradlew installDebug
-```
+## Evaluation Method
 
-## Development Notes
+- Define the project task and expected behavior.
+- Run representative examples or user flows.
+- Record correctness, speed, reliability, usability, and failure cases.
 
-- Uses MVVM architecture pattern
-- Follows Android Jetpack best practices
-- Implements proper lifecycle handling
-- Includes error handling and retry logic
+## Results
 
-## License
+- No validated quantitative results are published yet.
+- Current README status: implementation and usage are documented before formal measurement.
 
-See LICENSE file for details
+## Interpretation
+
+- The project can be described as implemented or in progress, but impact claims should stay limited until measurements are collected.
+- Use the evaluation plan below to turn the project into resume-ready, evidence-backed work.
+
+## Limitations
+
+- Results should only be treated as validated when this README includes the dataset, sample size, metric definition, and reproduction steps.
+- Any AI-generated, OCR-based, scraped, or heuristic output requires manual review before being used as ground truth.
+- Environment-dependent measurements such as latency, memory use, browser behavior, and API reliability should be re-measured on the target machine.
+
+## Recommendations and Future Work
+
+- Add a small benchmark or validation dataset.
+- Report sample size, success rate, error rate, and runtime where applicable.
+- Add screenshots, logs, or exported reports that support the measured results.
+
+## Documentation Standard
+
+This README follows a technical-project structure: overview, goal, system design, setup, evaluation method, results, interpretation, limitations, and recommendations. Update the Results section whenever new measurements are available so project claims stay evidence-backed.
