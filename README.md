@@ -8,33 +8,24 @@ Repository: [JohnAndrewBalbarosa/Mobile-Programming](https://github.com/JohnAndr
 
 ## Problem and Goal
 
-This project should be read as a technical build: it identifies a concrete workflow or research problem, implements a working system around that problem, and documents enough evidence for another person to understand, run, and evaluate the result.
+**Problem.** Android course exercises need one repository where application code, instrumented tests, and unit tests can be reviewed together.
 
-Primary goals:
-
-- Explain what the project does and who it is for.
-- Show the architecture and implementation choices.
-- Provide enough setup guidance for local review.
-- Report measured results when available.
-- Make limitations and next steps explicit instead of implying unverified impact.
+**Goal.** Collect Kotlin/Android mobile-programming implementations and their test suites as an academic development portfolio.
 
 ## System Design
 
-Current documented components:
-
-- Automated tests or validation examples.
-
-Project tags:
-
-- To be tagged based on the final project stack.
+- `main/`: Android application source and resources.
+- `test/`: local unit tests.
+- `androidTest/`: device/emulator instrumentation tests.
+- No root Gradle wrapper/build file is currently committed, so the repository is not independently reproducible from the command line.
 
 ## Setup and Usage
 
-Use the commands below as the starting point for local setup. Verify environment variables, secrets, datasets, and external services before running production-like workflows.
-
-No runnable setup command is confirmed yet.
-
-Document the dependency installation and run command after the next local verification pass.
+```bash
+# Open the project sources in Android Studio.
+# A root Gradle wrapper/build definition is not currently committed;
+# add or restore it before claiming a reproducible CLI build.
+```
 
 ## Evaluation Method
 
